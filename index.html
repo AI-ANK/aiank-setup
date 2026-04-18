@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-ANK Setup Guide</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --primary: #7c6af7;
+      --primary-light: #a89cf7;
+      --text: #e2e4ed;
+      --muted: #8b8fa8;
+      --success: #4caf82;
+      --warning: #f5a623;
+      --error: #e05c5c;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header .logo {
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .intro {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+
+    .intro h2 { font-size: 17px; margin-bottom: 6px; }
+    .intro p { color: var(--muted); font-size: 14px; }
+
+    .steps-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .step {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .step-body h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .step-body p, .step-body li {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .step-body ul {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+
+    .step-body ul li { margin-bottom: 4px; }
+
+    .step-body a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    .step-body a:hover { text-decoration: underline; }
+
+    .callout {
+      background: #1e2135;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .callout strong { color: var(--text); }
+
+    .tag {
+      display: inline-block;
+      background: #2a1f5e;
+      color: var(--primary-light);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .connector {
+      width: 2px;
+      height: 16px;
+      background: var(--border);
+      margin: -12px 0 -12px 15px;
+    }
+
+    .done-card {
+      background: #0d2320;
+      border: 1px solid #1a4038;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .done-card h3 { font-size: 18px; margin-bottom: 6px; }
+    .done-card p { color: var(--muted); font-size: 14px; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🤖</div>
+  <div>
+    <h1>AI-ANK Setup Guide</h1>
+    <p>Get up and running in a few minutes</p>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <h2>What you'll need</h2>
+    <p>AI-ANK runs AI models entirely on your device — nothing leaves your phone. To download the models, you need a free HuggingFace account and an access token. This guide walks you through it.</p>
+  </div>
+
+  <p class="steps-title">Step-by-step</p>
+
+  <!-- Step 1 -->
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h3>Create a HuggingFace account</h3>
+      <p>Go to <a href="https://huggingface.co/join" target="_blank">huggingface.co/join</a> and sign up for a free account. No credit card required.</p>
+    </div>
+  </div>
+  <div class="connector"></div>
+
+  <!-- Step 2 -->
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h3>Accept the Gemma model license <span class="tag">Required</span></h3>
+      <p>The Gemma models used by AI-ANK are gated — you must accept Google's license before you can download them.</p>
+      <ul>
+        <li>Visit <a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm" target="_blank">Gemma-4-E2B (2B model)</a></li>
+        <li>Visit <a href="https://huggingface.co/litert-community/gemma-4-E4B-it-litert-lm" target="_blank">Gemma-4-E4B (4B model)</a></li>
+        <li>Click <strong>Agree and access repository</strong> on each page</li>
+      </ul>
+      <div class="callout">
+        <strong>Note:</strong> You only need to do this once per model. Your acceptance is tied to your HuggingFace account.
+      </div>
+    </div>
+  </div>
+  <div class="connector"></div>
+
+  <!-- Step 3 -->
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h3>Generate an access token</h3>
+      <p>Go to <a href="https://huggingface.co/settings/tokens" target="_blank">huggingface.co/settings/tokens</a> and create a new token:</p>
+      <ul>
+        <li>Click <strong>New token</strong></li>
+        <li>Give it any name (e.g. <em>AI-ANK</em>)</li>
+        <li>Set role to <strong>Read</strong></li>
+        <li>Click <strong>Generate a token</strong></li>
+        <li>Copy the token — it starts with <code>hf_</code></li>
+      </ul>
+    </div>
+  </div>
+  <div class="connector"></div>
+
+  <!-- Step 4 -->
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h3>Paste the token into AI-ANK</h3>
+      <p>In the app, open <strong>Settings</strong> (gear icon, top right) → scroll to <strong>HuggingFace</strong> → paste your token into the <em>Access Token</em> field.</p>
+      <div class="callout">
+        The token is stored only on your device and is never sent anywhere except HuggingFace for model downloads.
+      </div>
+    </div>
+  </div>
+  <div class="connector"></div>
+
+  <!-- Step 5 -->
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h3>Download a model</h3>
+      <p>Tap the model name in the top bar → open <strong>Model Manager</strong> → select a model and tap <strong>Download</strong>. The download runs in the background.</p>
+      <ul>
+        <li><strong>Gemma-4-E2B</strong> — ~1.8 GB, faster, good for most tasks</li>
+        <li><strong>Gemma-4-E4B</strong> — ~3.2 GB, more capable</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="done-card">
+    <h3>✅ You're all set!</h3>
+    <p>Once the model finishes downloading, start a chat. Everything runs on your device — no internet needed for conversations.</p>
+  </div>
+</main>
+
+<footer>
+  <p>AI-ANK &mdash; On-device AI for Android &mdash; <a href="https://ai-ank.github.io/aiank-privacy/" target="_blank">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
